@@ -25,7 +25,7 @@ describe 'apache::vhost', :type => :define do
       :template          => 'apache/vhost-default.conf.erb',
       :vhost_name        => '*',
       :include_templates => [],
-      :user_options      => [],
+      :user_options      => {},
       :ensure            => 'present'
       }
     end

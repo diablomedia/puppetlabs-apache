@@ -20,7 +20,7 @@
 # - The $vhost_name for name based virtualhosting, defaulting to *
 # - The $include_templates takes an optional array of template names to include
 #   into the configuration file
-# - The $user_options takes an array of user-defined options for use inside of
+# - The $user_options is a hash of user-defined options for use inside of
 #   custom templates
 # - The $logroot specifies the location of the virtual hosts logfiles, default
 #   to /var/log/<apache log location>/
@@ -59,7 +59,7 @@ define apache::vhost(
     $apache_name        = $apache::params::apache_name,
     $vhost_name         = $apache::params::vhost_name,
     $include_templates  = [],
-    $user_options       = [],
+    $user_options       = {},
     $logroot            = "/var/log/$apache::params::apache_name",
     $access_log         = true,
     $ensure             = 'present'
