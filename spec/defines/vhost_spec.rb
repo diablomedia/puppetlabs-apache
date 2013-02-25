@@ -11,20 +11,22 @@ describe 'apache::vhost', :type => :define do
 
     let :default_params do
       {
-      :apache_name   => 'apache2',
-      :auth          => false,
-      :docroot       => 'path/to/docroot',
-      :options       => 'Indexes FollowSymLinks MultiViews',
-      :override      => 'None',
-      :port          => '80',
-      :priority      => '25',
-      :redirect_ssl  => false,
-      :serveraliases => '',
-      :servername    => '',
-      :ssl           => true,
-      :template      => 'apache/vhost-default.conf.erb',
-      :vhost_name    => '*',
-      :ensure        => 'present'
+      :apache_name       => 'apache2',
+      :auth              => false,
+      :docroot           => 'path/to/docroot',
+      :options           => 'Indexes FollowSymLinks MultiViews',
+      :override          => 'None',
+      :port              => '80',
+      :priority          => '25',
+      :redirect_ssl      => false,
+      :serveraliases     => '',
+      :servername        => '',
+      :ssl               => true,
+      :template          => 'apache/vhost-default.conf.erb',
+      :vhost_name        => '*',
+      :include_templates => [],
+      :user_options      => [],
+      :ensure            => 'present'
       }
     end
 

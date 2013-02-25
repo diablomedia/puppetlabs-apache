@@ -27,5 +27,8 @@ NameVirtualHost <%= vhost_name %>:<%= port %>
   CustomLog <%= logroot %>/<%= name %>_access.log combined
 <% end -%>
   ServerSignature Off
+<% include_templates.each do |template| -%>
+    <%= scope.function_template(template) %>
+<% end -%>
 </VirtualHost>
 
