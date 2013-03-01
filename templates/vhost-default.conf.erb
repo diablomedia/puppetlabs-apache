@@ -28,7 +28,7 @@ NameVirtualHost <%= vhost_name %>:<%= port %>
 <% end -%>
   ServerSignature Off
 <% include_templates.each do |template| -%>
-    <%= scope.function_template(template) %>
+    <%= scope.function_template([template]) %>
 <% end -%>
 </VirtualHost>
 
