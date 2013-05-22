@@ -49,7 +49,7 @@ define apache::vhost::redirect (
     @firewall {
       "0100-INPUT ACCEPT $port":
         jump  => 'ACCEPT',
-        dport => '$port',
+        dport => $port,
         proto => 'tcp'
     }
   }
